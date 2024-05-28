@@ -1,0 +1,18 @@
+listen: "127.0.0.1:8080"
+
+checkpoints: ./checkpoints.db
+
+logs:
+  - name: integration
+    shortname: integration
+    inception: 2024-04-07
+    httpprefix: /
+    roots: ./roots.pem
+    key: ./pkcs8.pem
+    cache: ./cache.db
+    poolsize: 750
+    s3region: auto
+    s3bucket: bucket1
+    s3endpoint: http://127.0.0.1:54321
+    notafterstart: 2024-07-01T00:00:00Z
+    notafterlimit: 2025-01-01T00:00:00Z
